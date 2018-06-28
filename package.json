@@ -1,0 +1,30 @@
+{
+  "name": "perio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturasgusevas/perio.git"
+  },
+  "author": "ArturasG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturasgusevas/perio/issues"
+  },
+  "homepage": "https://github.com/arturasgusevas/perio#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.6.3",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "postcss-reporter": "^5.0.0",
+    "postcss-scss": "^1.0.6",
+    "stylelint": "^9.3.0"
+  }
+}
