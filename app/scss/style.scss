@@ -1,34 +1,96 @@
-body{
+//Variables
+$ocean-blue: #00aeef;
+$white: #ffffff;
+$light-gray: #999999;
+$gray: #6b6b6b;
+$dark-gray: #222222;
+$main-font: Raleway;
+
+
+*{
   margin: 0;
   padding: 0;
-  font-family: Raleway, sans-serif;
+}
+
+body{
+  font-family: $main-font;
+}
+
+.tophead, .menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 20%;
 }
 
 header{
-  max-width: 100%;
   height: 80px;
-  .blue-top{
-    width: 100%;
-    background-color: #00aeef;
-    height: 40%;
-    color: white;
-    font-size: 11px;
-    .content{
-      display: flex;
-      flex-direction: row;
+    .tophead{
+      max-width: 100%;
+      background-color: $ocean-blue;
+      height: 40%;
+      color: $white;
+      font-size: 11px;
       justify-content: flex-end;
-      align-items: center;
-      padding: 5px 20%;
-      .flag-lt{
+      .language{
+        position: relative;
+        div{
+          width: 22px;
+          z-index: 1;
+          visibility: hidden;
+          position: absolute;
+          opacity: 0;
+          a{
+            position: relative;
+            margin: 0 0 0 -2px;
+            img{
+              border: 5px solid $ocean-blue;
+            }
+          }
+        }
+        a{
+          cursor: pointer;
+        }
+      }
+      .language:hover div{
+        visibility: visible;
+        opacity: 1;
+        a{
+          cursor: pointer;
+        }
+      }
+      .flag{
         width: 20px;
         height: 20px;
         background-image: url('icons/flag-lt.png');
-        background-color: black;
         background-repeat: no-repeat;
         border-radius: 50%;
       }
-      div, img, .flag-lt{
+      p, img {
         margin-left: 20px;
+      }
+    }
+    .menu{
+    justify-content: space-between;
+    .logo img{
+      margin: 3px 0;
+      width: 60px;
+    }
+    ul{
+      display: inline-flex;
+      list-style-type: none;
+      align-items: center;
+      li{
+        margin-left: 45px;
+        font-size: 10px;
+        font-weight: 700;
+        a{
+          color: gray;
+          img{
+           width: 20px;
+         }
+        }
       }
     }
   }

@@ -1,29 +1,68 @@
-body {
+* {
   margin: 0;
-  padding: 0;
-  font-family: Raleway, sans-serif; }
+  padding: 0; }
+
+body {
+  font-family: Raleway; }
+
+.tophead, .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 20%; }
 
 header {
-  max-width: 100%;
   height: 80px; }
-  header .blue-top {
-    width: 100%;
+  header .tophead {
+    max-width: 100%;
     background-color: #00aeef;
     height: 40%;
-    color: white;
-    font-size: 11px; }
-    header .blue-top .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 5px 20%; }
-      header .blue-top .content .flag-lt {
-        width: 20px;
-        height: 20px;
-        background-image: url("icons/flag-lt.png");
-        background-color: black;
-        background-repeat: no-repeat;
-        border-radius: 50%; }
-      header .blue-top .content div, header .blue-top .content img, header .blue-top .content .flag-lt {
-        margin-left: 20px; }
+    color: #ffffff;
+    font-size: 11px;
+    justify-content: flex-end; }
+    header .tophead .language {
+      position: relative; }
+      header .tophead .language div {
+        width: 22px;
+        z-index: 1;
+        visibility: hidden;
+        position: absolute;
+        opacity: 0; }
+        header .tophead .language div a {
+          position: relative;
+          margin: 0 0 0 -2px; }
+          header .tophead .language div a img {
+            border: 5px solid #00aeef; }
+      header .tophead .language a {
+        cursor: pointer; }
+    header .tophead .language:hover div {
+      visibility: visible;
+      opacity: 1; }
+      header .tophead .language:hover div a {
+        cursor: pointer; }
+    header .tophead .flag {
+      width: 20px;
+      height: 20px;
+      background-image: url("icons/flag-lt.png");
+      background-repeat: no-repeat;
+      border-radius: 50%; }
+    header .tophead p, header .tophead img {
+      margin-left: 20px; }
+  header .menu {
+    justify-content: space-between; }
+    header .menu .logo img {
+      margin: 3px 0;
+      width: 60px; }
+    header .menu ul {
+      display: inline-flex;
+      list-style-type: none;
+      align-items: center; }
+      header .menu ul li {
+        margin-left: 45px;
+        font-size: 10px;
+        font-weight: 700; }
+        header .menu ul li a {
+          color: gray; }
+          header .menu ul li a img {
+            width: 20px; }
