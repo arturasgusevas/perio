@@ -2,29 +2,30 @@
   margin: 0;
   padding: 0; }
 
-body {
-  font-family: Raleway; }
+body, header, div, p {
+  font-family: "Raleway"; }
 
-.tophead, .menu {
+.tophead, .menu, section {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
-  padding: 5px 20%; }
+  padding: 5px 22%; }
 
 header {
-  height: 80px; }
+  height: 11vh;
+  margin-bottom: 15px; }
   header .tophead {
     max-width: 100%;
     background-color: #00aeef;
-    height: 40%;
+    height: 3.5vh;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
     justify-content: flex-end; }
     header .tophead .language {
       position: relative; }
       header .tophead .language div {
-        width: 22px;
+        width: 30px;
         z-index: 1;
         visibility: hidden;
         position: absolute;
@@ -42,27 +43,44 @@ header {
       header .tophead .language:hover div a {
         cursor: pointer; }
     header .tophead .flag {
-      width: 20px;
-      height: 20px;
+      width: 26px;
+      height: 26px;
       background-image: url("icons/flag-lt.png");
       background-repeat: no-repeat;
       border-radius: 50%; }
     header .tophead p, header .tophead img {
-      margin-left: 20px; }
+      margin-left: 30px; }
   header .menu {
     justify-content: space-between; }
     header .menu .logo img {
       margin: 3px 0;
-      width: 60px; }
+      width: 80px; }
     header .menu ul {
       display: inline-flex;
       list-style-type: none;
       align-items: center; }
       header .menu ul li {
-        margin-left: 45px;
-        font-size: 10px;
-        font-weight: 700; }
+        margin-left: 60px;
+        font-size: 13.5px;
+        font-weight: 600;
+        letter-spacing: 0.5px; }
         header .menu ul li a {
           color: gray; }
           header .menu ul li a img {
-            width: 20px; }
+            width: 25px; }
+      header .menu ul li:hover {
+        cursor: pointer;
+        color: #00aeef; }
+
+.welcome {
+  background: url("../images/chair.jpeg"), linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: no-repeat;
+  background-position: 0 -250px;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  max-width: 100%; }
+  .welcome .welcome-content {
+    width: 100%; }
+    .welcome .welcome-content p, .welcome .welcome-content h1 {
+      margin-bottom: 20px; }
